@@ -1,8 +1,18 @@
 package ru.mail.polis.sort;
 
-public class MergeSort {
+import java.util.Comparator;
 
-    public <T extends Comparable<T>> T[] sort(T[] a) {
+public class MergeSort<T> extends AbstractSortOnComparisons<T> {
+
+    public MergeSort() {
+    }
+
+    public MergeSort(Comparator<? super T> comparator) {
+        super(comparator);
+    }
+
+    @Override
+    public void sort(T[] a) {
         int n = a.length;
         T[] t = (T[]) new Comparable[n];
         for (int len = 1; len < n; len *= 2) {
@@ -12,12 +22,10 @@ public class MergeSort {
                 merge(a, t, left, mid, right);
             }
         }
-
-        return a;
     }
 
 
-    private <T extends Comparable<T>> void merge(T[] a, T[] t, int left, int mid, int right) {
+    private void merge(T[] a, T[] t, int left, int mid, int right) {
         for (int i = left; i <= right; i++) {
             t[i] = a[i];
         }
@@ -25,17 +33,9 @@ public class MergeSort {
         for (int k = left; k <= right; k++) {
             if (i > mid) a[k] = t[j++];
             else if (j > right) a[k] = t[i++];
-            else if (t[j].compareTo(t[i]) < 0) a[k] = t[j++];
+            else if (lesser(t[j], t[i])) a[k] = t[j++];
             else a[k] = t[i++];
         }
-
-    }
-
-
-    private <T> void swap(T[] a, int i, int j) {
-        T t = a[i];
-        a[i] = a[j];
-        a[j] = t;
 
     }
 }

@@ -1,0 +1,300 @@
+"C:\Program Files\Java\jdk1.8.0_152\bin\java" "-javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin" -Dfile.encoding=UTF-8 -classpath "C:\Program Files\Java\jdk1.8.0_152\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\access-bridge-64.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\jaccess.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\nashorn.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\sunjce_provider.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\sunmscapi.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\sunpkcs11.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\ext\zipfs.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\javaws.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jfxswt.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\management-agent.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\plugin.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_152\jre\lib\rt.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\out\production\sorting-master;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jopt-simple-4.6.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\junit-4.12-javadoc.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-core-1.15-sources.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-generator-annprocess-1.15.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\hamcrest-core-1.3.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-generator-annprocess-1.15-javadoc.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-core-1.15-javadoc.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-core-1.15.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\junit-4.12-sources.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\commons-math3-3.2.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\jmh-generator-annprocess-1.15-sources.jar;C:\Users\Aleksey.Antufev\Documents\sorting-master\lib\junit-4.12.jar" ru.mail.polis.bench.AverageTimeBench
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureCountingSort
+
+# Run progress: 0,00% complete, ETA 00:02:20
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,160 us/op
+# Warmup Iteration   2: 0,134 us/op
+# Warmup Iteration   3: 0,129 us/op
+# Warmup Iteration   4: 0,133 us/op
+# Warmup Iteration   5: 0,130 us/op
+# Warmup Iteration   6: 0,132 us/op
+# Warmup Iteration   7: 0,129 us/op
+# Warmup Iteration   8: 0,126 us/op
+# Warmup Iteration   9: 0,127 us/op
+# Warmup Iteration  10: 0,123 us/op
+Iteration   1: 0,128 us/op
+Iteration   2: 0,120 us/op
+Iteration   3: 0,128 us/op
+Iteration   4: 0,128 us/op
+Iteration   5: 0,129 us/op
+Iteration   6: 0,124 us/op
+Iteration   7: 0,125 us/op
+Iteration   8: 0,134 us/op
+Iteration   9: 0,123 us/op
+Iteration  10: 0,133 us/op
+
+
+Result "measureCountingSort":
+  0,127 ±(99.9%) 0,006 us/op [Average]
+  (min, avg, max) = (0,120, 0,127, 0,134), stdev = 0,004
+  CI (99.9%): [0,121, 0,134] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureHeapSort
+
+# Run progress: 14,29% complete, ETA 00:02:10
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,264 us/op
+# Warmup Iteration   2: 0,196 us/op
+# Warmup Iteration   3: 0,210 us/op
+# Warmup Iteration   4: 0,194 us/op
+# Warmup Iteration   5: 0,192 us/op
+# Warmup Iteration   6: 0,207 us/op
+# Warmup Iteration   7: 0,190 us/op
+# Warmup Iteration   8: 0,200 us/op
+# Warmup Iteration   9: 0,197 us/op
+# Warmup Iteration  10: 0,192 us/op
+Iteration   1: 0,193 us/op
+Iteration   2: 0,191 us/op
+Iteration   3: 0,189 us/op
+Iteration   4: 0,199 us/op
+Iteration   5: 0,182 us/op
+Iteration   6: 0,188 us/op
+Iteration   7: 0,191 us/op
+Iteration   8: 0,191 us/op
+Iteration   9: 0,194 us/op
+Iteration  10: 0,193 us/op
+
+
+Result "measureHeapSort":
+  0,191 ±(99.9%) 0,007 us/op [Average]
+  (min, avg, max) = (0,182, 0,191, 0,199), stdev = 0,004
+  CI (99.9%): [0,184, 0,198] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureLsdSimpleIntegerSort
+
+# Run progress: 28,57% complete, ETA 00:01:48
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,240 us/op
+# Warmup Iteration   2: 0,233 us/op
+# Warmup Iteration   3: 0,231 us/op
+# Warmup Iteration   4: 0,207 us/op
+# Warmup Iteration   5: 0,223 us/op
+# Warmup Iteration   6: 0,226 us/op
+# Warmup Iteration   7: 0,218 us/op
+# Warmup Iteration   8: 0,213 us/op
+# Warmup Iteration   9: 0,220 us/op
+# Warmup Iteration  10: 0,222 us/op
+Iteration   1: 0,219 us/op
+Iteration   2: 0,228 us/op
+Iteration   3: 0,225 us/op
+Iteration   4: 0,224 us/op
+Iteration   5: 0,220 us/op
+Iteration   6: 0,225 us/op
+Iteration   7: 0,212 us/op
+Iteration   8: 0,217 us/op
+Iteration   9: 0,217 us/op
+Iteration  10: 0,223 us/op
+
+
+Result "measureLsdSimpleIntegerSort":
+  0,221 ±(99.9%) 0,007 us/op [Average]
+  (min, avg, max) = (0,212, 0,221, 0,228), stdev = 0,005
+  CI (99.9%): [0,214, 0,228] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureLsdSimpleStringSort
+
+# Run progress: 42,86% complete, ETA 00:01:26
+# Fork: 1 of 1
+# Warmup Iteration   1: 1,012 us/op
+# Warmup Iteration   2: 0,941 us/op
+# Warmup Iteration   3: 0,884 us/op
+# Warmup Iteration   4: 0,914 us/op
+# Warmup Iteration   5: 0,927 us/op
+# Warmup Iteration   6: 0,828 us/op
+# Warmup Iteration   7: 0,863 us/op
+# Warmup Iteration   8: 0,854 us/op
+# Warmup Iteration   9: 0,851 us/op
+# Warmup Iteration  10: 0,843 us/op
+Iteration   1: 0,857 us/op
+Iteration   2: 0,863 us/op
+Iteration   3: 0,846 us/op
+Iteration   4: 0,930 us/op
+Iteration   5: 0,833 us/op
+Iteration   6: 0,858 us/op
+Iteration   7: 0,852 us/op
+Iteration   8: 0,856 us/op
+Iteration   9: 0,839 us/op
+Iteration  10: 0,876 us/op
+
+
+Result "measureLsdSimpleStringSort":
+  0,861 ±(99.9%) 0,041 us/op [Average]
+  (min, avg, max) = (0,833, 0,861, 0,930), stdev = 0,027
+  CI (99.9%): [0,820, 0,902] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureMergeSort
+
+# Run progress: 57,14% complete, ETA 00:01:04
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,349 us/op
+# Warmup Iteration   2: 0,328 us/op
+# Warmup Iteration   3: 0,324 us/op
+# Warmup Iteration   4: 0,295 us/op
+# Warmup Iteration   5: 0,289 us/op
+# Warmup Iteration   6: 0,334 us/op
+# Warmup Iteration   7: 0,298 us/op
+# Warmup Iteration   8: 0,340 us/op
+# Warmup Iteration   9: 0,292 us/op
+# Warmup Iteration  10: 0,318 us/op
+Iteration   1: 0,320 us/op
+Iteration   2: 0,305 us/op
+Iteration   3: 0,312 us/op
+Iteration   4: 0,312 us/op
+Iteration   5: 0,316 us/op
+Iteration   6: 0,310 us/op
+Iteration   7: 0,315 us/op
+Iteration   8: 0,303 us/op
+Iteration   9: 0,308 us/op
+Iteration  10: 0,289 us/op
+
+
+Result "measureMergeSort":
+  0,309 ±(99.9%) 0,013 us/op [Average]
+  (min, avg, max) = (0,289, 0,309, 0,320), stdev = 0,009
+  CI (99.9%): [0,296, 0,322] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureQuickSort
+
+# Run progress: 71,43% complete, ETA 00:00:43
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,219 us/op
+# Warmup Iteration   2: 0,204 us/op
+# Warmup Iteration   3: 0,190 us/op
+# Warmup Iteration   4: 0,183 us/op
+# Warmup Iteration   5: 0,184 us/op
+# Warmup Iteration   6: 0,192 us/op
+# Warmup Iteration   7: 0,184 us/op
+# Warmup Iteration   8: 0,200 us/op
+# Warmup Iteration   9: 0,180 us/op
+# Warmup Iteration  10: 0,199 us/op
+Iteration   1: 0,192 us/op
+Iteration   2: 0,185 us/op
+Iteration   3: 0,180 us/op
+Iteration   4: 0,183 us/op
+Iteration   5: 0,189 us/op
+Iteration   6: 0,213 us/op
+Iteration   7: 0,179 us/op
+Iteration   8: 0,187 us/op
+Iteration   9: 0,206 us/op
+Iteration  10: 0,192 us/op
+
+
+Result "measureQuickSort":
+  0,191 ±(99.9%) 0,017 us/op [Average]
+  (min, avg, max) = (0,179, 0,191, 0,213), stdev = 0,011
+  CI (99.9%): [0,174, 0,207] (assumes normal distribution)
+
+
+# JMH ${project.version} (released ${buildDate})
+# VM version: JDK 1.8.0_152, VM 25.152-b16
+# VM invoker: C:\Program Files\Java\jdk1.8.0_152\jre\bin\java.exe
+# VM options: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\lib\idea_rt.jar=55904:C:\Program Files\JetBrains\IntelliJ IDEA 2017.3\bin -Dfile.encoding=UTF-8
+# Warmup: 10 iterations, 1 s each
+# Measurement: 10 iterations, 1 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: ru.mail.polis.bench.AverageTimeBench.measureQuickSortWithInsertions
+
+# Run progress: 85,71% complete, ETA 00:00:21
+# Fork: 1 of 1
+# Warmup Iteration   1: 0,228 us/op
+# Warmup Iteration   2: 0,199 us/op
+# Warmup Iteration   3: 0,194 us/op
+# Warmup Iteration   4: 0,201 us/op
+# Warmup Iteration   5: 0,196 us/op
+# Warmup Iteration   6: 0,184 us/op
+# Warmup Iteration   7: 0,210 us/op
+# Warmup Iteration   8: 0,196 us/op
+# Warmup Iteration   9: 0,210 us/op
+# Warmup Iteration  10: 0,208 us/op
+Iteration   1: 0,196 us/op
+Iteration   2: 0,187 us/op
+Iteration   3: 0,196 us/op
+Iteration   4: 0,187 us/op
+Iteration   5: 0,192 us/op
+Iteration   6: 0,198 us/op
+Iteration   7: 0,189 us/op
+Iteration   8: 0,198 us/op
+Iteration   9: 0,188 us/op
+Iteration  10: 0,195 us/op
+
+
+Result "measureQuickSortWithInsertions":
+  0,193 ±(99.9%) 0,007 us/op [Average]
+  (min, avg, max) = (0,187, 0,193, 0,198), stdev = 0,005
+  CI (99.9%): [0,186, 0,200] (assumes normal distribution)
+
+
+# Run complete. Total time: 00:02:30
+
+Benchmark                                        Mode  Cnt  Score   Error  Units
+AverageTimeBench.measureCountingSort             avgt   10  0,127 ± 0,006  us/op
+AverageTimeBench.measureHeapSort                 avgt   10  0,191 ± 0,007  us/op
+AverageTimeBench.measureLsdSimpleIntegerSort     avgt   10  0,221 ± 0,007  us/op
+AverageTimeBench.measureLsdSimpleStringSort      avgt   10  0,861 ± 0,041  us/op
+AverageTimeBench.measureMergeSort                avgt   10  0,309 ± 0,013  us/op
+AverageTimeBench.measureQuickSort                avgt   10  0,191 ± 0,017  us/op
+AverageTimeBench.measureQuickSortWithInsertions  avgt   10  0,193 ± 0,007  us/op
+
+Process finished with exit code 0
