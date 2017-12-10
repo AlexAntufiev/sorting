@@ -2,8 +2,19 @@ package ru.mail.polis.sort;
 
 import ru.mail.polis.structures.IntKeyObject;
 
-public class CountingSort {
-    public <T extends IntKeyObject> T[] sort(T[] a) {
+import java.util.Comparator;
+
+public class CountingSort<T extends IntKeyObject> extends AbstractSortOnComparisons<T> {
+
+    public CountingSort() {
+    }
+
+    public CountingSort(Comparator<? super T> comparator) {
+        super(comparator);
+    }
+
+    @Override
+    public void sort(T[] a) {
         int max = findMax(a);
         int[] count = new int[max + 1];
         for (T x : a) count[x.getKey()]++;
@@ -16,13 +27,10 @@ public class CountingSort {
         for (int i = a.length - 1; i >= 0; i--) {
             res[--count[a[i].getKey()]] = a[i];
         }
-
         System.arraycopy(res, 0, a, 0, a.length);
-
-        return a;
     }
 
-    private <T extends IntKeyObject> int findMax(T[] a) {
+    private int findMax(T[] a) {
         int max = 0;
         for (T x : a) {
             max = Math.max(max, x.getKey());

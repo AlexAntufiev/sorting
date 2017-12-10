@@ -4,7 +4,7 @@ package ru.mail.polis.structures;
  * Created by Nechaev Mikhail
  * Since 12/11/2017.
  */
-public class SimpleInteger implements Numerical, Comparable<ru.mail.polis.structures.SimpleInteger> {
+public class SimpleInteger implements Numerical<SimpleInteger> {
 
     private static final int DIGIT_COUNT = 10;
 
@@ -15,29 +15,24 @@ public class SimpleInteger implements Numerical, Comparable<ru.mail.polis.struct
         if (data == null) {
             throw new IllegalArgumentException("Source must be not null");
         }
-        int[] temp = new int[32];
+        int[] temp = new int[DIGIT_COUNT];
         int length = 0;
-        for (int i = 0; i < 32; i++) {
+        for (int i = 0; i < DIGIT_COUNT; i++) {
             if (data == 0)
                 break;
             temp[i] = data % DIGIT_COUNT;
             data /= DIGIT_COUNT;
-        }
-        this.data = temp;
-        for (int i = 0; i < temp.length; i++) {
-            if (temp[i] == 0) {
-                length = i;
-                break;
-            }
+            length++;
         }
         this.length = length;
+        this.data = temp;
     }
 
     @Override
     public int getDigit(int index) throws IndexOutOfBoundsException {
         if (index < 0) {
             throw new IndexOutOfBoundsException("Negative index " + index);
-        } else if (index >= getDigitCount()) {
+        } else if (index < getDigitCount()) {
             return 0;
         } else {
             return data[index];
@@ -56,10 +51,10 @@ public class SimpleInteger implements Numerical, Comparable<ru.mail.polis.struct
 
     @Override
     public int compareTo(SimpleInteger anotherSimpleInteger) {
-        if (data[31] > anotherSimpleInteger.data[31]) {
+        if (data[9] > anotherSimpleInteger.data[9]) {
             return -1;
         }
-        if (data[31] < anotherSimpleInteger.data[31]) {
+        if (data[9] < anotherSimpleInteger.data[9]) {
             return 1;
         }
 
@@ -70,5 +65,9 @@ public class SimpleInteger implements Numerical, Comparable<ru.mail.polis.struct
                 return 1;
         }
         return 0;
+    }
+
+    public static void main(String[] args) {
+        new SimpleInteger(Integer.MAX_VALUE);
     }
 }

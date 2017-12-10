@@ -32,20 +32,19 @@ public class Tester {
     @Parameterized.Parameters(name = "{index}")
     public static Collection<int[]> data() {
         return Arrays.asList(new int[][]{
-            {0},
-            {0, 0, 0, 0},
-            {4, 3, 2, 1},
-            {0, 1, 1, 0},
-            {1},
-            {Integer.MAX_VALUE, 0, 0, Integer.MIN_VALUE},
-            SortUtils.generateArray(1),
-            SortUtils.generateArray(10),
-            SortUtils.generateArray(100),
-            SortUtils.generateArray(1000),
-            SortUtils.generateArray(10000),
+                {0},
+                {0, 0, 0, 0},
+                {4, 3, 2, 1},
+                {0, 1, 1, 0},
+                {1},
+                {Integer.MAX_VALUE, 0, 0, Integer.MIN_VALUE},
+//            SortUtils.generateArray(1),
+//            SortUtils.generateArray(10),
+//            SortUtils.generateArray(100),
+//            SortUtils.generateArray(1000),
+//            SortUtils.generateArray(10000),
         });
     }
-
 
 
     @Test

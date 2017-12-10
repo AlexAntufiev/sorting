@@ -1,50 +1,26 @@
 package ru.mail.polis.sort;
 
-public class HeapSort {
-    public <T extends Comparable<T>> T[] sort(T[] heap) {
-        int heapSize = heap.length;
-        build(heap);
-        for(int i = 0; i<heap.length-1; i++){
-            swap(heap, 0, heapSize-1);
-            heapSize--;
-            shiftDown(heap, heapSize, 0);
-        }
+import ru.mail.polis.structures.ArrayPriorityQueue;
 
-        return heap;
+import java.util.Comparator;
 
+public class HeapSort<T extends Comparable> extends AbstractSortOnComparisons<T> {
+
+    public HeapSort() {
     }
 
-    private  <T extends Comparable<T>> void build(T[] heap) {
-        int n = heap.length;
-        for (int i = n / 2 - 1; i >= 0; i--) {
-            shiftDown(heap, n, i);
-        }
+    public HeapSort(Comparator<? super T> comparator) {
+        super(comparator);
     }
 
-    private  <T extends Comparable<T>> void shiftDown(T[] heap, int size,  int i){
-        int maxIndex = i;
-        int l = 2*i+1;
-        int r = 2*i+2;
-        if(l<size && (heap[l].compareTo(heap[maxIndex])>0)){
-            maxIndex = l;
-        }
-
-        if(r<size && (heap[r].compareTo(heap[maxIndex])>0)){
-            maxIndex = r;
-        }
-
-        if(i!=maxIndex){
-            T cur = heap[i];
-            heap[i] = heap[maxIndex];
-            heap[maxIndex] = cur;
-            shiftDown(heap, size, maxIndex);
+    @Override
+    public void sort(T[] array) {
+        ArrayPriorityQueue<T> queue = new ArrayPriorityQueue<>();
+        queue.addAll(array);
+        for (int i = 0; i < array.length - 1; i++) {
+            swap(array, 0, array.length - 1 - i);
+            queue.setSize(queue.size() - 1);
+            queue.siftDown(0);
         }
     }
-
-    private <T> void swap(T[] a, int i, int j) {
-        T t = a[i];
-        a[i] = a[j];
-        a[j] = t;
-    }
-
 }
